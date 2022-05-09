@@ -95,6 +95,7 @@ namespace Combine_Multiple_pdf_files
             // 
             // textBox2
             // 
+            this.textBox2.AcceptsReturn = true;
             this.textBox2.Location = new System.Drawing.Point(32, 152);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";

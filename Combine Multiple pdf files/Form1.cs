@@ -32,9 +32,9 @@ namespace Combine_Multiple_pdf_files
             {
                 stringFileName = openFileDialog.FileName;
                 textBox2.AppendText("Added file:");
-                textBox2.AppendText("\n\r");
+                textBox2.AppendText(Environment.NewLine);
                 textBox2.AppendText(stringFileName);
-                textBox2.AppendText("\n\r");
+                textBox2.AppendText(Environment.NewLine);
             }
 
         }
