@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combine Multiple pdf files", "Combine Multiple pdf files\Combine Multiple pdf files.csproj", "{D23E2C5A-6B74-44B1-85ED-1192A5B9D472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D23E2C5A-6B74-44B1-85ED-1192A5B9D472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D23E2C5A-6B74-44B1-85ED-1192A5B9D472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23E2C5A-6B74-44B1-85ED-1192A5B9D472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D23E2C5A-6B74-44B1-85ED-1192A5B9D472}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78771409-2868-49B3-B792-493A4A235A18}
+	EndGlobalSection
+EndGlobal
