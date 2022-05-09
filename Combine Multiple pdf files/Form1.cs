@@ -21,5 +21,22 @@ namespace Combine_Multiple_pdf_files
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string stringFileName = "";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                stringFileName = openFileDialog.FileName;
+                textBox2.AppendText("Added file:");
+                textBox2.AppendText("\n\r");
+                textBox2.AppendText(stringFileName);
+                textBox2.AppendText("\n\r");
+            }
+
+        }
     }
 }
