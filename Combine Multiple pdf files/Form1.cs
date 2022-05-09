@@ -16,5 +16,10 @@ namespace Combine_Multiple_pdf_files
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
