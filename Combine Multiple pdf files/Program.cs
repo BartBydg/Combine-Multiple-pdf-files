@@ -14,6 +14,7 @@ namespace Combine_Multiple_pdf_files
         [STAThread]
         static void Main()
         {
+            String[] StagePDFFile = new String[1];
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
