@@ -17,6 +17,9 @@ namespace Combine_Multiple_pdf_files
             InitializeComponent();
         }
 
+        private List<PdfFile> pdfFiles = new List<PdfFile>();
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,7 +38,8 @@ namespace Combine_Multiple_pdf_files
                 textBox2.AppendText(Environment.NewLine);
                 textBox2.AppendText(stringFileName);
                 textBox2.AppendText(Environment.NewLine);
-                //new PdfSupport().pdfFiles.Add("xxxxxx");
+                pdfFiles.Add(new PdfFile(stringFileName));
+
             }
 
         }
