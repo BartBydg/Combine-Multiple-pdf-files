@@ -43,9 +43,10 @@ namespace Combine_Multiple_pdf_files
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(29, 29);
+            this.button1.Location = new System.Drawing.Point(39, 36);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 39);
+            this.button1.Size = new System.Drawing.Size(185, 48);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add file";
             this.button1.UseVisualStyleBackColor = false;
@@ -56,12 +57,14 @@ namespace Combine_Multiple_pdf_files
             this.button2.BackColor = System.Drawing.Color.ForestGreen;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(174, 29);
+            this.button2.Location = new System.Drawing.Point(232, 36);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 39);
+            this.button2.Size = new System.Drawing.Size(185, 48);
             this.button2.TabIndex = 1;
             this.button2.Text = "Start combine files";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -69,9 +72,10 @@ namespace Combine_Multiple_pdf_files
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(319, 29);
+            this.button3.Location = new System.Drawing.Point(425, 36);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 39);
+            this.button3.Size = new System.Drawing.Size(185, 48);
             this.button3.TabIndex = 2;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = false;
@@ -80,43 +84,47 @@ namespace Combine_Multiple_pdf_files
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 99);
+            this.label1.Location = new System.Drawing.Point(39, 122);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 13);
+            this.label1.Size = new System.Drawing.Size(155, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Name of the output file:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 96);
+            this.textBox1.Location = new System.Drawing.Point(199, 118);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 20);
+            this.textBox1.Size = new System.Drawing.Size(411, 22);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
             this.textBox2.AcceptsReturn = true;
-            this.textBox2.Location = new System.Drawing.Point(32, 152);
+            this.textBox2.Location = new System.Drawing.Point(43, 187);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(426, 286);
+            this.textBox2.Size = new System.Drawing.Size(567, 351);
             this.textBox2.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 133);
+            this.label2.Location = new System.Drawing.Point(43, 164);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(36, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Log:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(500, 450);
+            this.ClientSize = new System.Drawing.Size(667, 554);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -125,6 +133,7 @@ namespace Combine_Multiple_pdf_files
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Opacity = 0.85D;
             this.Text = "Form1";

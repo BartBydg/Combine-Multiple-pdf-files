@@ -16,8 +16,7 @@ namespace Combine_Multiple_pdf_files
         {
             InitializeComponent();
         }
-
-        private List<PdfFile> pdfFiles = new List<PdfFile>();
+        private String[] pdfFiles = new String[0];
 
 
         private void button3_Click(object sender, EventArgs e)
@@ -38,9 +37,31 @@ namespace Combine_Multiple_pdf_files
                 textBox2.AppendText(Environment.NewLine);
                 textBox2.AppendText(stringFileName);
                 textBox2.AppendText(Environment.NewLine);
-                pdfFiles.Add(new PdfFile(stringFileName));
+                String correctFileName = stringFileName.Replace("\\","\\\\");
+
+
+                Array.Resize(ref pdfFiles, pdfFiles.Length + 1);
+                pdfFiles[pdfFiles.Length - 1] = correctFileName;
+
+                pdfFiles.Append(correctFileName);
 
             }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //// only uniqe vales in result
+            //var  pdfFilesStg = pdfFiles.GroupBy(x => x.addFile)
+            //    .Where(x => x.Count() == 1)
+            //    .Select(x => x.First());
+
+            //// only distinct values in result 
+            //var pdfFilesDistinct = pdfFiles.GroupBy(x => x.addFile)
+            //    .Select(x => x.Distinct()).ToArray();
+            var pdfFilesDistinct = pdfFiles.Distinct().ToArray();
+
+            PdfFileWorker.CreateoutputFile(pdfFilesDistinct);
 
         }
     }

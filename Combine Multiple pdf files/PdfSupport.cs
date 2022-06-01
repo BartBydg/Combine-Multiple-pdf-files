@@ -7,6 +7,7 @@ using PdfSharp;
 using PdfSharp.Drawing;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
+using System.Diagnostics;
 
 namespace Combine_Multiple_pdf_files
 {
@@ -20,6 +21,26 @@ namespace Combine_Multiple_pdf_files
         }
     }
 
+    class PdfFileWorker {
 
+        internal static void CreateoutputFile(String[] pdfFilesDistinct)
+        {
+            PdfDocument outPdfDocument = new PdfDocument();
+
+            for (int x = 0; x< pdfFilesDistinct.Length; x++)
+            {
+                PdfDocument inputDocument = PdfReader.Open(pdfFilesDistinct[x], PdfDocumentOpenMode.Import);
+                Debug.WriteLine("TEST: "+ pdfFilesDistinct[x]);
+                for (int i = 0; i<inputDocument.PageCount; i++)
+                {
+
+                    outPdfDocument.AddPage(inputDocument.Pages[i]);
+                }
+            }
+
+            outPdfDocument.Save("C:\\Tools\\testxxx.pdf");
+
+        }
+    }
 
 }
