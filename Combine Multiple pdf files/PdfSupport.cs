@@ -30,7 +30,6 @@ namespace Combine_Multiple_pdf_files
             for (int x = 0; x< pdfFilesDistinct.Length; x++)
             {
                 PdfDocument inputDocument = PdfReader.Open(pdfFilesDistinct[x], PdfDocumentOpenMode.Import);
-                Debug.WriteLine("TEST: "+ pdfFilesDistinct[x]);
                 for (int i = 0; i<inputDocument.PageCount; i++)
                 {
 
