@@ -60,8 +60,8 @@ namespace Combine_Multiple_pdf_files
             //var pdfFilesDistinct = pdfFiles.GroupBy(x => x.addFile)
             //    .Select(x => x.Distinct()).ToArray();
             var pdfFilesDistinct = pdfFiles.Distinct().ToArray();
-
-            PdfFileWorker.CreateoutputFile(pdfFilesDistinct);
+            
+            PdfFileWorker.CreateoutputFile(pdfFilesDistinct,textBox1.Text);
 
         }
     }

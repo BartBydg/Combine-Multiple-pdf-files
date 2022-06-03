@@ -8,6 +8,8 @@ using PdfSharp.Drawing;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 using System.Diagnostics;
+using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Combine_Multiple_pdf_files
 {
@@ -23,7 +25,7 @@ namespace Combine_Multiple_pdf_files
 
     class PdfFileWorker {
 
-        internal static void CreateoutputFile(String[] pdfFilesDistinct)
+        internal static void CreateoutputFile(String[] pdfFilesDistinct, String outputFileName)
         {
             PdfDocument outPdfDocument = new PdfDocument();
 
@@ -36,8 +38,22 @@ namespace Combine_Multiple_pdf_files
                     outPdfDocument.AddPage(inputDocument.Pages[i]);
                 }
             }
-
-            outPdfDocument.Save("C:\\Tools\\testxxx.pdf");
+            String outputFolder = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+            String output = outputFolder.Replace("\\", "\\\\");
+            output = output + "\\\\" + outputFileName;
+            if (outputFileName.Length < 1) {
+                outputFileName = "\\\\newPdfFile.pdf";
+            }
+            string illegalChars = @"^(?!^(PRN|AUX|CLOCK\$|NUL|CON|COM\d|LPT\d|\..*)(\..+)?$)[^\x00-\x1f\\?*:\"";|/]+$";
+            bool isValidName = Regex.IsMatch(outputFileName, illegalChars, RegexOptions.CultureInvariant);
+            if (isValidName == true)
+            {
+                output = output + "\\\\" + outputFileName;
+            }
+            else {
+                output = output + "\\\\newPdfFile.pdf";
+            }
+            outPdfDocument.Save(output);
 
         }
     }

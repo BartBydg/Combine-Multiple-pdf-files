@@ -44,9 +44,9 @@ namespace Combine_Multiple_pdf_files
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(39, 36);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 48);
+            this.button1.Size = new System.Drawing.Size(185, 30);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add file";
             this.button1.UseVisualStyleBackColor = false;
@@ -58,9 +58,9 @@ namespace Combine_Multiple_pdf_files
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(232, 36);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 48);
+            this.button2.Size = new System.Drawing.Size(185, 30);
             this.button2.TabIndex = 1;
             this.button2.Text = "Start combine files";
             this.button2.UseVisualStyleBackColor = false;
@@ -73,9 +73,9 @@ namespace Combine_Multiple_pdf_files
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(425, 36);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(185, 48);
+            this.button3.Size = new System.Drawing.Size(185, 30);
             this.button3.TabIndex = 2;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = false;
@@ -93,17 +93,23 @@ namespace Combine_Multiple_pdf_files
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.textBox1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox1.ForeColor = System.Drawing.Color.LimeGreen;
             this.textBox1.Location = new System.Drawing.Point(199, 118);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(411, 22);
+            this.textBox1.Size = new System.Drawing.Size(411, 23);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
             this.textBox2.AcceptsReturn = true;
+            this.textBox2.BackColor = System.Drawing.SystemColors.WindowText;
+            this.textBox2.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.LimeGreen;
             this.textBox2.Location = new System.Drawing.Point(43, 187);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(567, 351);
@@ -133,7 +139,7 @@ namespace Combine_Multiple_pdf_files
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Opacity = 0.85D;
             this.Text = "Form1";
