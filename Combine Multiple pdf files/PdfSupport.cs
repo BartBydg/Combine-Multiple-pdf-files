@@ -40,7 +40,6 @@ namespace Combine_Multiple_pdf_files
             }
             String outputFolder = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
             String output = outputFolder.Replace("\\", "\\\\");
-            output = output + "\\\\" + outputFileName;
             if (outputFileName.Length < 1) {
                 outputFileName = "\\\\newPdfFile.pdf";
             }
