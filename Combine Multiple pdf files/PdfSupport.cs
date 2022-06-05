@@ -39,18 +39,20 @@ namespace Combine_Multiple_pdf_files
                 }
             }
             String outputFolder = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-            String output = outputFolder.Replace("\\", "\\\\");
+            //String output = outputFolder.Replace("\\", "\\\\");
+            String output;
             if (outputFileName.Length < 1) {
-                outputFileName = "\\\\newPdfFile.pdf";
+
+                outputFileName = "\\\\newPdfFile"+ DateTime.Now.ToString("YYYYMMddHHmmss") + ".pdf";
             }
             string illegalChars = @"^(?!^(PRN|AUX|CLOCK\$|NUL|CON|COM\d|LPT\d|\..*)(\..+)?$)[^\x00-\x1f\\?*:\"";|/]+$";
             bool isValidName = Regex.IsMatch(outputFileName, illegalChars, RegexOptions.CultureInvariant);
             if (isValidName == true)
             {
-                output = output + "\\\\" + outputFileName;
+                output = outputFolder.Replace("\\", "\\\\") + "\\\\" + outputFileName;
             }
             else {
-                output = output + "\\\\newPdfFile.pdf";
+                output = outputFolder.Replace("\\", "\\\\") + "\\\\newPdfFile.pdf";
             }
             outPdfDocument.Save(output);
 
